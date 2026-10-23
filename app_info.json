@@ -1,0 +1,18 @@
+{
+  "slug": "send_cmqtt",
+  "entry": "app.py",
+  "title": "Control por MQTT",
+  "category": "IoT",
+  "headline": "De la interfaz.",
+  "accent": "Al dispositivo.",
+  "description": "Publica órdenes digitales y un valor analógico mediante MQTT.",
+  "input": "Botones ON/OFF o valor de 0 a 100.",
+  "output": "Mensajes JSON publicados en los tópicos de control configurados.",
+  "steps": "Con el receptor preparado, usa ON/OFF o ajusta el valor y pulsa Enviar valor analógico.",
+  "technology": "Paho MQTT · JSON",
+  "limits": "Requiere un broker y un receptor disponibles. Publicar un mensaje no confirma que el dispositivo lo haya ejecutado.",
+  "image": "OIG6.jpg",
+  "url": "https://sendcmqtt-mdrghytcblpjzstjsqupkm.streamlit.app/",
+  "repo": "https://github.com/Jhuza/send_cmqtt",
+  "kind": "vision"
+}
