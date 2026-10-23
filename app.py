@@ -5,6 +5,9 @@ import json
 import platform
 
 # Muestra la versión de Python junto con detalles adicionales
+from aurora import app_header, footer
+app_header()
+
 st.write("Versión de Python:", platform.python_version())
 
 values = 0.0
@@ -30,9 +33,8 @@ client1.on_message = on_message
 
 
 
-st.title("MQTT Control")
 
-if st.button('ON'):
+if st.button('ON', type="primary"):
     act1="ON"
     client1= paho.Client("clientejhg")                           
     client1.on_publish = on_publish                          
@@ -61,7 +63,7 @@ else:
 values = st.slider('Selecciona el rango de valores',0.0, 100.0)
 st.write('Values:', values)
 
-if st.button('Enviar valor analógico'):
+if st.button('Enviar valor analógico', type="primary"):
     client1= paho.Client("clientejhg")                           
     client1.on_publish = on_publish                          
     client1.connect(broker,port)   
@@ -75,3 +77,6 @@ else:
 
 
 
+
+
+footer("TEXTO / IMAGEN / VOZ / INTERACCIÓN")
